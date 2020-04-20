@@ -1,0 +1,33 @@
+04.20 23:48
+mariadb常用命令方法更新中
+MariaDB [(none)]> show databases;
+
+
+MariaDB [(none)]> use mysql;
+
+
+MariaDB [mysql]> set password for root@localhost =password("newpassword");
+
+
+
+MariaDB [(none)]> exit
+Bye
+
+$ mysql -u root -pnewpassword
+
+
+
+4.2 MariaDB中如何显示所有用户?
+
+MariaDB [(none)]> select User,Host,Password from mysql.user;
+
+
+
+常用命令
+
+clear
+
+whoami
+
+exit
+

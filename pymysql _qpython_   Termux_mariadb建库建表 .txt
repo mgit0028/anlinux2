@@ -1,0 +1,17 @@
+04.21 07:22
+pymysql _qpython_   Termux_mariadb建库建表测试
+s3/pymysql建库2_mariadb建库2.py" && exit <
+/data/user/0/com.hipipal.qpyplus/files/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (1007, "Can't create database 'db2'; database exists")
+  result = self._query(query)
+创建数据库 db2 成功！
+
+#[QPython] Press enter to exit ...
+
+
+
+
+s3/pymysql2_mariadb建表.py" && exit      <
+创建数据库表成功！
+
+#[QPython] Press enter to exit ...
+

@@ -1,0 +1,94 @@
+04.21 07:15
+显示某个表创建时的全部信息：
+Welcome to Termux!
+
+Wiki:            https://wiki.termux.com
+Community forum: https://termux.com/community
+Gitter chat:     https://gitter.im/termux/termux
+IRC channel:     #termux on freenode
+
+Working with packages:
+
+ * Search packages:   pkg search <query>
+ * Install a package: pkg install <package>
+ * Upgrade packages:  pkg upgrade
+
+Subscribing to additional repositories:
+
+ * Root:     pkg install root-repo
+ * Unstable: pkg install unstable-repo
+ * X11:      pkg install x11-repo
+
+Report issues at https://termux.com/issues
+
+$ mysql
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.12-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> select User,Host,Password from mysql.user;
++----------+---------------+-------------------------------------------+
+| User     | Host          | Password                                  |
++----------+---------------+-------------------------------------------+
+| root     | localhost     | *FE4F2D624C07AAEBB979DA5C980D0250C37D8F63 |
+| u0_a190  | localhost     | *8A149F5F25102D3018DB82915886C45E69201F38 |
+|          | localhost     |                                           |
+| username | hostname      | *54958E764CE10E50764C2EECBB71D01F08549980 |
+| username | %             | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| root     | %             | *6BB4837EB74329105EE4568DDA7DC67ED2CA2AD9 |
+| newuser  | localhost     | *6BB4837EB74329105EE4568DDA7DC67ED2CA2AD9 |
+| my       | localhost     | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
+| luke     | localhost     | *55D9962586BE75F4B7D421E6655973DB07D6869F |
+| ku1      | localhost     | *C5491AFE3877D10E1F71C91A60C14AC5BD8DE355 |
+| username | host          | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| ann      | localhost     | *3FE845A8344363E8A8CC8CFD6540655DA275024A |
+| jack     | 192.168.3.103 | *9BCDC990E611B8D852EFAF1E3919AB6AC8C8A9F0 |
+| ja       | %             | *5B9956176408EDCAC92456D111CEB0706C5BC9F3 |
++----------+---------------+-------------------------------------------+
+14 rows in set (0.018 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| db1                |
+| db2                |
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+6 rows in set (0.015 sec)
+
+MariaDB [(none)]> use db1;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [db1]> show tables;
++---------------+
+| Tables_in_db1 |
++---------------+
+| user          |
+| user22        |
++---------------+
+2 rows in set (0.002 sec)
+
+MariaDB [db1]> SHOW CREATE TABLE user;
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table | Create Table                                                                                                                                                                                                                  |
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| user  | CREATE TABLE `user` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `password` varchar(30) DEFAULT NULL,
+  `birthday` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
++-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.063 sec)
+
+MariaDB [db1]>
